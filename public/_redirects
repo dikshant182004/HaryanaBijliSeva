@@ -1,0 +1,3 @@
+# Cloudflare Pages SPA rewrite rule
+# Direct all unmatched client routes to index.html with a 200 OK status
+/*    /index.html   200

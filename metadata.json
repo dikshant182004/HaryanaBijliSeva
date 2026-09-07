@@ -1,0 +1,6 @@
+{
+  "name": "Haryana Bijli Seva - UHBVN & DHBVN Portal",
+  "description": "Bilingual Haryana electricity portal for UHBVN and DHBVN: Discom lookup, bill payment directory, new connection estimator, name transfer guide, and 1912 grievance redressal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
