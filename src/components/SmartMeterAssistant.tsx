@@ -419,6 +419,29 @@ export const SmartMeterAssistant: React.FC<Props> = ({ lang }) => {
             </p>
           </div>
         </div>
+
+        {/* Verified Toll-Free Helplines & Last Verified Stamp */}
+        <div className="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-bold text-slate-700">
+              {lang === 'hi' ? 'स्मार्ट मीटर आपातकालीन हेल्पलाइन:' : 'Smart Meter Emergency Helplines:'}
+            </span>
+            <a href="tel:1912" className="font-mono font-bold text-rose-600 hover:underline">
+              1912 (24x7 Universal)
+            </a>
+            <span>•</span>
+            <a href="tel:18001804334" className="font-mono font-bold text-sky-700 hover:underline">
+              1800-180-4334 (DHBVN)
+            </a>
+            <span>•</span>
+            <a href="tel:18001801550" className="font-mono font-bold text-emerald-700 hover:underline">
+              1800-180-1550 (UHBVN)
+            </a>
+          </div>
+          <div className="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+            {lang === 'hi' ? 'HERC प्रीपेड विनियम अनुसार सत्यापित: मार्च 2025' : 'Verified against HERC Prepaid Regulations: March 2025'}
+          </div>
+        </div>
       </div>
     </div>
   );

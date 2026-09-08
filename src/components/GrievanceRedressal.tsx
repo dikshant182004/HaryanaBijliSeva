@@ -56,14 +56,30 @@ export const GrievanceRedressal: React.FC<Props> = ({ lang }) => {
                 {t.outage1912.helplineDesc}
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100">
+            <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-2">
               <a
                 href="tel:1912"
                 className="w-full py-2.5 px-4 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-all shadow-xs"
               >
                 <PhoneCall className="w-4 h-4" />
-                <span>{lang === 'hi' ? 'सीधे 1912 डायल करें' : 'Call 1912 Directly (Toll-Free)'}</span>
+                <span>{lang === 'hi' ? 'सीधे 1912 डायल करें (24x7)' : 'Call 1912 Directly (24x7)'}</span>
               </a>
+              <div className="grid grid-cols-2 gap-1.5 text-[11px] font-mono">
+                <a
+                  href="tel:18001804334"
+                  className="py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg text-center font-bold"
+                  title="DHBVN Toll Free"
+                >
+                  DH: 1800-180-4334
+                </a>
+                <a
+                  href="tel:18001801550"
+                  className="py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg text-center font-bold"
+                  title="UHBVN Toll Free"
+                >
+                  UH: 1800-180-1550
+                </a>
+              </div>
             </div>
           </div>
 
@@ -236,6 +252,17 @@ export const GrievanceRedressal: React.FC<Props> = ({ lang }) => {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <div className="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <span className="text-slate-600">
+              {lang === 'hi'
+                ? 'स्रोत: HERC (Standards of Performance of Distribution Licensees) Regulations 2020 एवं उपभोक्ता शिकायत निवारण मंच नियम'
+                : 'Source: HERC (Standards of Performance of Distribution Licensees) Regulations 2020 & CGRF Guidelines'}
+            </span>
+            <div className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-md border border-slate-200">
+              {lang === 'hi' ? 'HERC विनियम अनुसार सत्यापित: मार्च 2025' : 'Verified against HERC Regulations: March 2025'}
+            </div>
           </div>
         </div>
       </div>

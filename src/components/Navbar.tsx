@@ -14,7 +14,10 @@ import {
   ExternalLink,
   Cpu,
   Calculator,
-  MessageSquare
+  MessageSquare,
+  Scale,
+  FileText,
+  BookOpen
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -68,6 +71,27 @@ export const Navbar: React.FC<Props> = ({ lang, setLang }) => {
 
   // Secondary tools in dropdown & mobile drawer
   const moreTools = [
+    {
+      to: '/bill-sanity-checker',
+      label: lang === 'hi' ? 'बिल सेनिटी चेकर (ओवरबिलिंग ऑडिट)' : 'Bill Sanity Checker & Audit',
+      desc: lang === 'hi' ? 'रीडिंग डालकर जांचें कि बिल HERC स्लैब अनुसार सही है या नहीं' : 'Instant mathematical verification against HERC tariff slabs',
+      icon: Scale,
+      color: 'text-emerald-700 bg-emerald-50'
+    },
+    {
+      to: '/complaint-generator',
+      label: lang === 'hi' ? 'विधिक शिकायत पत्र जनरेटर' : 'Statutory SDO Complaint Generator',
+      desc: lang === 'hi' ? 'गलत बिल, जले मीटर व लो वोल्टेज पर तैयार कानूनी नोटिस' : 'Printable formal legal notice for SDO / XEN / CGRF',
+      icon: FileText,
+      color: 'text-rose-600 bg-rose-50'
+    },
+    {
+      to: '/bill-glossary',
+      label: lang === 'hi' ? 'बिल शब्दावली (ACD, FSA, MDI)' : 'Bill Terms & Charges Glossary',
+      desc: lang === 'hi' ? 'समझें बिजली बिल के हर शुल्क व कानूनी अधिकारों का अर्थ' : 'Decode security deposit, fuel surcharge, and penalties',
+      icon: BookOpen,
+      color: 'text-sky-600 bg-sky-50'
+    },
     {
       to: '/smart-meter',
       label: lang === 'hi' ? 'स्मार्ट मीटर गाइड व 5% छूट' : 'Smart Meter & 5% Rebate',

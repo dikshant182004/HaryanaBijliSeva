@@ -20,6 +20,10 @@ import { PaymentHelpPage } from './pages/PaymentHelpPage';
 import { SmartMeterPage } from './pages/SmartMeterPage';
 import { LoadCalculatorPage } from './pages/LoadCalculatorPage';
 import { TrustBillingPage } from './pages/TrustBillingPage';
+import { BillGlossaryPage } from './pages/BillGlossaryPage';
+import { ComplaintGeneratorPage } from './pages/ComplaintGeneratorPage';
+import { BillSanityCheckerPage } from './pages/BillSanityCheckerPage';
+import { AboutPage, PrivacyPage, DisclaimerPage } from './pages/LegalTrustPages';
 
 function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) => void }) {
   const { currentPath } = useRouter();
@@ -52,6 +56,15 @@ function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) 
     if (currentPath === '/bill-dispute') {
       return <BillDisputePage lang={lang} />;
     }
+    if (currentPath === '/bill-sanity-checker') {
+      return <BillSanityCheckerPage lang={lang} />;
+    }
+    if (currentPath === '/complaint-generator') {
+      return <ComplaintGeneratorPage lang={lang} />;
+    }
+    if (currentPath === '/bill-glossary') {
+      return <BillGlossaryPage lang={lang} />;
+    }
     if (currentPath === '/solar-calculator') {
       return <SolarCalculatorPage lang={lang} />;
     }
@@ -70,9 +83,19 @@ function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) 
     if (currentPath === '/districts') {
       return <DistrictsPage lang={lang} />;
     }
-    if (currentPath.startsWith('/districts/')) {
-      const districtId = currentPath.replace('/districts/', '').split('/')[0].split('?')[0].split('#')[0];
+    if (currentPath.startsWith('/districts/') || currentPath.startsWith('/district/')) {
+      const prefix = currentPath.startsWith('/districts/') ? '/districts/' : '/district/';
+      const districtId = currentPath.replace(prefix, '').split('/')[0].split('?')[0].split('#')[0];
       return <DistrictDetailPage districtId={districtId} lang={lang} />;
+    }
+    if (currentPath === '/about') {
+      return <AboutPage lang={lang} />;
+    }
+    if (currentPath === '/privacy') {
+      return <PrivacyPage lang={lang} />;
+    }
+    if (currentPath === '/disclaimer') {
+      return <DisclaimerPage lang={lang} />;
     }
 
     // Default fallback to HomePage

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  
+  <!-- Subtle Grid Accent -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+  
+  <!-- Glow Circle -->
+  <circle cx="200" cy="200" r="180" fill="#10b981" fill-opacity="0.15" />
+  
+  <!-- Card Container -->
+  <rect x="80" y="70" width="1040" height="490" rx="24" fill="url(#cardBg)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" />
+  
+  <!-- Badge -->
+  <rect x="140" y="130" width="370" height="40" rx="20" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-opacity="0.4" />
+  <text x="160" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#34d399" letter-spacing="1">
+    UHBVN &amp; DHBVN CITIZEN CIVIC-TECH HUB
+  </text>
+  
+  <!-- Main Title -->
+  <text x="140" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" fill="#ffffff">
+    हरियाणा बिजली सेवा
+  </text>
+  <text x="140" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="700" fill="#94a3b8">
+    Haryana Bijli Seva — Independent Consumer Portal
+  </text>
+  
+  <!-- Feature Bullets -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500" fill="#cbd5e1">
+    <text x="140" y="380">⚡ HERC Tariff Calculator (FY 2025-26)</text>
+    <text x="140" y="420">📋 High Bill &amp; Defective Meter Dispute Generator</text>
+    <text x="640" y="380">📞 1912 &amp; Verified Toll-Free Helplines</text>
+    <text x="640" y="420">📍 22 District Directory &amp; SDO Contacts</text>
+  </g>
+  
+  <!-- Bottom Bar with Helplines -->
+  <rect x="140" y="470" width="920" height="50" rx="12" fill="#0f172a" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+  <text x="170" y="502" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#f87171">
+    24x7 Helpline: 1912
+  </text>
+  <text x="440" y="502" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#38bdf8">
+    DHBVN: 1800-180-4334
+  </text>
+  <text x="730" y="502" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#34d399">
+    UHBVN: 1800-180-1550
+  </text>
+</svg>

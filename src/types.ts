@@ -2,6 +2,13 @@ export type DiscomType = 'UHBVN' | 'DHBVN';
 
 export type Language = 'en' | 'hi';
 
+export interface DistrictFaq {
+  qEn: string;
+  qHi: string;
+  aEn: string;
+  aHi: string;
+}
+
 export interface DistrictInfo {
   id: string;
   nameEn: string;
@@ -16,8 +23,12 @@ export interface DistrictInfo {
   contactPhone: string;
   circleOfficeAddressEn: string;
   circleOfficeAddressHi: string;
+  cgrfZonalOfficeEn?: string;
+  cgrfZonalOfficeHi?: string;
   descriptionEn?: string;
   descriptionHi?: string;
+  localKeywords?: string[];
+  faqs?: DistrictFaq[];
 }
 
 export type ConnectionCategory = 'domestic' | 'nondomestic' | 'agriculture' | 'industrial_lt' | 'industrial_ht';

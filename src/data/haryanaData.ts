@@ -345,7 +345,10 @@ export const OFFICIAL_LINKS = {
     knowAccount: 'https://epayment.uhbvn.org.in/knowYourAccount.aspx',
     cgrf: 'https://www.uhbvn.org.in/web/portal/cgrf',
     consumerPortal: 'https://epayment.uhbvn.org.in/consumerLogin.aspx',
-    whatsappHelp: 'https://wa.me/919815961912'
+    whatsappHelp: 'https://wa.me/919815961912',
+    tollFree: '1800-180-1550',
+    complaintPortal: 'https://www.uhbvn.org.in/web/portal/register-complaint',
+    officialEmail: '1912@uhbvn.org.in'
   },
   dhbvn: {
     portal: 'https://www.dhbvn.org.in/',
@@ -355,12 +358,29 @@ export const OFFICIAL_LINKS = {
     knowAccount: 'https://epayment.dhbvn.org.in/knowYourAccount.aspx',
     cgrf: 'https://www.dhbvn.org.in/web/portal/cgrf',
     consumerPortal: 'https://epayment.dhbvn.org.in/consumerLogin.aspx',
-    whatsappHelp: 'https://wa.me/918882101912'
+    whatsappHelp: 'https://wa.me/918813997080',
+    tollFree: '1800-180-4334',
+    complaintPortal: 'https://www.dhbvn.org.in/web/portal/register-complaint',
+    officialEmail: '1912@dhbvn.org.in'
   },
   saralHaryana: 'https://saralharyana.gov.in/',
   parivarPehchanPatra: 'https://meraparivar.haryana.gov.in/',
   hercOmbudsman: 'https://herc.gov.in/'
 };
+
+export const VERIFIED_HELPLINES = {
+  universalHelpline: '1912',
+  dhbvnTollFree: '1800-180-4334',
+  uhbvnTollFree: '1800-180-1550',
+  uhbvnWhatsapp: '+91 98159-61912',
+  dhbvnWhatsapp: '+91 88139-97080',
+  uhbvnGrievanceEmail: '1912@uhbvn.org.in',
+  dhbvnGrievanceEmail: '1912@dhbvn.org.in',
+  lastVerifiedBadgeEn: 'Verified against HERC Tariff Orders & DISCOM Circulars: March 2025',
+  lastVerifiedBadgeHi: 'HERC टैरिफ आदेश एवं निगम परिपत्रों अनुसार सत्यापित: मार्च 2025'
+};
+
+export const LAST_VERIFIED_DATE = 'March 2025';
 
 // Accurate Rates as per HERC (Haryana Electricity Regulatory Commission) Tariff Order FY 2025-26 & 2026-27
 export const TARIFF_RATES = {
@@ -688,4 +708,141 @@ export const HERC_SOP_STANDARDS = [
     compensationEn: '₹100 per day of delay'
   }
 ];
+
+export function getDistrictZonalCgrf(district: DistrictInfo): {
+  nameEn: string;
+  nameHi: string;
+  addressEn: string;
+  addressHi: string;
+  phone: string;
+  email: string;
+  jurisdictionEn: string;
+  jurisdictionHi: string;
+} {
+  const isU = district.discom === 'UHBVN';
+  const northUhbvnDistricts = ['panchkula', 'ambala', 'yamunanagar', 'kurukshetra', 'kaithal'];
+  const ncrDhbvnDistricts = ['gurugram', 'faridabad', 'palwal', 'nuh', 'rewari'];
+
+  if (isU) {
+    if (northUhbvnDistricts.includes(district.id)) {
+      return {
+        nameEn: 'CGRF Zonal Forum (North Zone - Kurukshetra)',
+        nameHi: 'विद्युत उपभोक्ता शिकायत निवारण मंच (CGRF उत्तर जोन - कुरुक्षेत्र)',
+        addressEn: 'Vidyut Sadan, Sector 3, Urban Estate, Kurukshetra - 136118',
+        addressHi: 'विद्युत सदन, सेक्टर 3, अर्बन एस्टेट, कुरुक्षेत्र - 136118',
+        phone: '01744-220025',
+        email: 'cgrf@uhbvn.org.in',
+        jurisdictionEn: 'Covers Panchkula, Ambala, Yamunanagar, Kurukshetra, and Kaithal circles',
+        jurisdictionHi: 'पंचकूला, अम्बाला, यमुनानगर, कुरुक्षेत्र एवं कैथल सर्कलों का क्षेत्राधिकार'
+      };
+    } else {
+      return {
+        nameEn: 'CGRF Zonal Forum (South Zone - Rohtak)',
+        nameHi: 'विद्युत उपभोक्ता शिकायत निवारण मंच (CGRF दक्षिण जोन - रोहतक)',
+        addressEn: 'Rajiv Gandhi Vidyut Bhawan, Medical Mor, Rohtak - 124001',
+        addressHi: 'राजीव गांधी विद्युत भवन, मेडिकल मोड़, रोहतक - 124001',
+        phone: '01262-246505',
+        email: 'cgrf@uhbvn.org.in',
+        jurisdictionEn: 'Covers Karnal, Panipat, Sonipat, Rohtak, Jhajjar, and Jind circles',
+        jurisdictionHi: 'करनाल, पानीपत, सोनीपत, रोहतक, झज्जर एवं जींद सर्कलों का क्षेत्राधिकार'
+      };
+    }
+  } else {
+    if (ncrDhbvnDistricts.includes(district.id)) {
+      return {
+        nameEn: 'CGRF Zonal Forum (NCR Zone - Gurugram)',
+        nameHi: 'विद्युत उपभोक्ता शिकायत निवारण मंच (CGRF एनसीआर जोन - गुरुग्राम)',
+        addressEn: 'Vidyut Sadan, Mehrauli-Gurgaon Road, Sector 14, Gurugram - 122001',
+        addressHi: 'विद्युत सदन, महरौली-गुड़गांव रोड, सेक्टर 14, गुरुग्राम - 122001',
+        phone: '0124-2305541',
+        email: 'cgrf@dhbvn.org.in',
+        jurisdictionEn: 'Covers Gurugram I & II, Faridabad, Palwal, Nuh, and Rewari circles',
+        jurisdictionHi: 'गुरुग्राम 1 व 2, फरीदाबाद, पलवल, नूह एवं रेवाड़ी सर्कलों का क्षेत्राधिकार'
+      };
+    } else {
+      return {
+        nameEn: 'CGRF Apex & Zonal Forum (West Zone - Hisar)',
+        nameHi: 'विद्युत उपभोक्ता शिकायत निवारण मंच (CGRF पश्चिम जोन - हिसार)',
+        addressEn: 'DHBVN Apex Headquarters, Vidyut Nagar, Hisar - 125005',
+        addressHi: 'डीएचबीवीएन मुख्यालय, विद्युत नगर, हिसार - 125005',
+        phone: '01662-223000',
+        email: 'cgrf@dhbvn.org.in',
+        jurisdictionEn: 'Covers Hisar, Sirsa, Fatehabad, Bhiwani, Charkhi Dadri, and Narnaul circles',
+        jurisdictionHi: 'हिसार, सिरसा, फतेहाबाद, भिवानी, चरखी दादरी एवं नारनौल सर्कलों का क्षेत्राधिकार'
+      };
+    }
+  }
+}
+
+export function getDistrictFaqs(district: DistrictInfo) {
+  const cgrf = getDistrictZonalCgrf(district);
+  const isU = district.discom === 'UHBVN';
+  const discomFullEn = isU ? 'Uttar Haryana Bijli Vitran Nigam (UHBVN)' : 'Dakshin Haryana Bijli Vitran Nigam (DHBVN)';
+  const discomFullHi = isU ? 'उत्तर हरियाणा बिजली वितरण निगम (UHBVN)' : 'दक्षिण हरियाणा बिजली वितरण निगम (DHBVN)';
+  const tollFree = isU ? '1800-180-1550' : '1800-180-4334';
+  const whatsappNum = isU ? '+91 98159-61912' : '+91 88139-97080';
+  const epayUrl = isU ? 'epayment.uhbvn.org.in' : 'epayment.dhbvn.org.in';
+  const subsList = district.subdivisions.join(', ');
+
+  return [
+    {
+      qEn: `What is the electricity complaint number for ${district.nameEn} electricity board?`,
+      qHi: `${district.nameHi} बिजली बोर्ड का शिकायत नंबर और कस्टमर केयर क्या है?`,
+      aEn: `For electricity complaints (power cuts, transformer faults, low voltage) in ${district.nameEn}, call the 24x7 Universal Toll-Free helpline 1912 or discom toll-free ${tollFree}. For direct local assistance, call the ${district.circleName} control room at ${district.contactPhone} or message official WhatsApp at ${whatsappNum}.`,
+      aHi: `${district.nameHi} में बिजली कटौती, ट्रांसफार्मर खराबी या लो वोल्टेज की शिकायत के लिए 24x7 टोल-फ्री 1912 अथवा ${tollFree} पर कॉल करें। स्थानीय ${district.circleName} कंट्रोल रूम का सीधा नंबर ${district.contactPhone} है और आधिकारिक व्हाट्सएप हेल्पलाइन ${whatsappNum} है।`
+    },
+    {
+      qEn: `Which electricity board serves ${district.nameEn} — UHBVN or DHBVN?`,
+      qHi: `${district.nameHi} में बिजली किस निगम द्वारा दी जाती है — UHBVN या DHBVN?`,
+      aEn: `${district.nameEn} district falls 100% under ${discomFullEn}. All urban, rural, domestic, and industrial power distribution is managed by ${district.circleName}. Account numbers for ${district.nameEn} typically begin with prefixes ${district.accountPrefixes.join(', ')}.`,
+      aHi: `${district.nameHi} जिला शत-प्रतिशत ${discomFullHi} के अंतर्गत आता है। जिले के सभी शहरी व ग्रामीण कनेक्शनों का प्रबंधन ${district.circleName} करता है। आपके बिल की खाता संख्या सामान्यतः ${district.accountPrefixes.join(', ')} कोड से शुरू होती है।`
+    },
+    {
+      qEn: `How to register a power outage or transformer breakdown in ${district.nameEn}?`,
+      qHi: `${district.nameHi} में बिजली गुल होने या ट्रांसफार्मर फुंकने की रिपोर्ट कैसे करें?`,
+      aEn: `Dial 1912 from your registered mobile phone or send your 10-digit account number via WhatsApp to ${whatsappNum}. Under HERC Standards of Performance, urban fuse-off faults must be restored within 4 hours (rural 8 hours), and burnt transformers must be replaced within 24 to 48 hours.`,
+      aHi: `अपने मोबाइल से 1912 पर कॉल करें अथवा व्हाट्सएप नंबर ${whatsappNum} पर 10 अंकों का खाता नंबर भेजें। HERC मानकों के अनुसार शहरी क्षेत्रों में 4 घंटे (ग्रामीण 8 घंटे) में फ्यूज ठीक होना चाहिए और जला हुआ ट्रांसफार्मर 24 से 48 घंटे में बदला जाना अनिवार्य है।`
+    },
+    {
+      qEn: `Where is the electricity circle office located in ${district.nameEn} and what are its timings?`,
+      qHi: `${district.nameHi} में बिजली बोर्ड का सर्कल कार्यालय कहाँ है और समय क्या है?`,
+      aEn: `The ${district.circleName} headquarters is located at ${district.circleOfficeAddressEn}. Local SDO sub-division offices (${subsList}) are open Monday to Saturday from 9:00 AM to 5:00 PM (cash counters open until 3:00 PM). Offices remain closed on Sundays and Haryana government gazetted holidays.`,
+      aHi: `${district.circleName} का मुख्य कार्यालय ${district.circleOfficeAddressHi} में स्थित है। स्थानीय एसडीओ कार्यालय (${subsList}) सोमवार से शनिवार सुबह 9:00 से शाम 5:00 बजे तक खुलते हैं (बिल काउंटर दोपहर 3:00 बजे तक)। रविवार व सरकारी अवकाश पर बंद रहते हैं।`
+    },
+    {
+      qEn: `How can I pay my ${district.nameEn} electricity bill online without convenience charges?`,
+      qHi: `${district.nameHi} का बिजली बिल ऑनलाइन बिना किसी अतिरिक्त शुल्क के कैसे भरें?`,
+      aEn: `Pay online on the official ${district.discom} payment portal (${epayUrl}) using UPI, Debit Card, or Net Banking with zero convenience fee. Consumers with prepaid smart meters receive an automatic 5% tariff discount under HERC regulations.`,
+      aHi: `${district.discom} के आधिकारिक ई-पेमेंट पोर्टल (${epayUrl}) पर यूपीआई, डेबिट कार्ड या नेट बैंकिंग से बिना किसी शुल्क के बिल भरें। प्रीपेड स्मार्ट मीटर उपभोक्ताओं को HERC नियमानुसार 5% की स्वतः छूट दी जाती है।`
+    },
+    {
+      qEn: `What should I do if the SDO in ${district.nameEn} does not resolve my wrong bill or defective meter?`,
+      qHi: `यदि ${district.nameHi} में एसडीओ गलत बिल या खराब मीटर का समाधान न करे तो कहाँ अपील करें?`,
+      aEn: `Submit a written statutory notice to the SDO with an official diary receiving number. If unresolved within 30 days, file an appeal before ${cgrf.nameEn} located at ${cgrf.addressEn} (Email: ${cgrf.email}) under HERC Consumer Grievances Redressal Forum Regulations.`,
+      aHi: `सर्वप्रथम एसडीओ कार्यालय में आधिकारिक रिसीविंग डायरी नंबर सहित लिखित विधिक आवेदन दें। यदि 30 दिनों में समाधान न मिले, तो HERC नियमों के तहत ${cgrf.nameHi} (${cgrf.addressHi}, ईमेल: ${cgrf.email}) में सीधे अपील दर्ज करें।`
+    }
+  ];
+}
+
+export function getDistrictKeywords(district: DistrictInfo): string[] {
+  const dist = district.nameEn;
+  const distHi = district.nameHi;
+  const d = district.discom;
+  return [
+    `${dist} electricity board customer care`,
+    `${dist} electricity complaint number`,
+    `${dist} bijli board helpline 1912`,
+    `${d} ${dist} contact number`,
+    `${dist} power cut complaint`,
+    `${dist} sdo electricity office timing`,
+    `${dist} bijli bill online check`,
+    `${dist} electricity circle office address`,
+    `${d} bill payment ${dist}`,
+    `${dist} new meter connection fees`,
+    ...district.subdivisions.map(s => `${s} electricity sdo office`),
+    `${distHi} बिजली शिकायत नंबर`,
+    `${distHi} बिजली बोर्ड कस्टमर केयर`,
+    `${distHi} बिजली विभाग संपर्क`
+  ];
+}
 

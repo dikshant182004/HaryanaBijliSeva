@@ -17,7 +17,8 @@ import {
   AlertTriangle,
   CreditCard,
   Cpu,
-  MessageSquare
+  MessageSquare,
+  BookOpen
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -644,6 +645,84 @@ export const HomePage: React.FC<Props> = ({ lang }) => {
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-950"
                 >
                   <span>{lang === 'hi' ? 'व्हाट्सएप व ट्रस्ट बिलिंग' : 'Open WhatsApp Hub'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 13: Bill Sanity Checker & Mathematical Audit */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-emerald-600">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
+                  <Scale className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '13. बिल सेनिटी चेकर (ओवरबिलिंग ऑडिट)' : '13. Bill Sanity Checker & Audit'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'मीटर की पिछली और वर्तमान रीडिंग डालकर 1 मिनट में जांचें कि बिल HERC स्लैब अनुसार सही है या आपसे अधिक चार्ज वसूला गया है।'
+                    : 'Enter meter readings and bill total to audit mathematical accuracy against HERC tariffs. Flags hidden ACD, arrears, and wrong multipliers.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/bill-sanity-checker"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-950"
+                >
+                  <span>{lang === 'hi' ? 'बिल की शुद्धता जांचें' : 'Audit Your Bill'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 14: Statutory SDO Complaint Notice Generator */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-rose-500">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '14. विधिक शिकायत पत्र जनरेटर (SDO नोटिस)' : '14. Statutory SDO Complaint Generator'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'गलत बिल, जले मीटर, लो वोल्टेज व कनेक्शन देरी पर HERC विनियम 61 अनुसार तैयार विधिक आवेदन पत्र प्रिंट करें और रिसीविंग डायरी नंबर लें।'
+                    : 'Generate ready-to-print formal legal notices to the SDO/XEN under HERC Consumer Redressal Regulations. Complete with diary receiving guidelines.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/complaint-generator"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-800 hover:text-rose-950"
+                >
+                  <span>{lang === 'hi' ? 'आवेदन पत्र तैयार करें' : 'Generate SDO Notice'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 15: Bill Terms & Surcharges Glossary */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-sky-500">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center mb-4">
+                  <BookOpen className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '15. बिल शब्दावली डिकोडर (ACD, FSA, MDI)' : '15. Bill Terms & Surcharges Glossary'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'समझें बिल के हर लाइन आइटम का अर्थ: ACD क्या है, FSA क्यों बढ़ता है, DEF/RN रिमार्क का क्या असर होता है, और CGRF अदालत के अधिकार।'
+                    : 'Demystify every surcharge: Advance Consumption Deposit, Fuel Surcharge Adjustment, Maximum Demand Indicator, DEF codes, and CGRF rights.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/bill-glossary"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-800 hover:text-sky-950"
+                >
+                  <span>{lang === 'hi' ? 'शब्दावली डिकोडर खोलें' : 'Open Bill Glossary'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

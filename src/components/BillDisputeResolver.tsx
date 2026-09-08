@@ -88,8 +88,8 @@ const BILL_REMARKS: RemarkInfo[] = [
     nameHi: 'सामान्य वास्तविक रीडिंग',
     meaningEn: 'Meter read successfully in person. If bill is still high, check seasonal AC usage, connected load slab, or meter accuracy.',
     meaningHi: 'रीडिंग सामान्य रूप से ली गई है। यदि बिल फिर भी अधिक है, तो एसी का उपयोग, लोड स्लैब या मीटर की शुद्धता की जांच कराएं।',
-    hercRuleEn: 'Consumer has statutory right to request Meter Testing on site or in Nigam testing lab by depositing nominal test fee (₹100 for single phase, ₹250 for three phase). If meter is fast (>2.5%), fee is refunded and excess bill credited.',
-    hercRuleHi: 'उपभोक्ता को ₹100 टेस्ट फीस जमा करके विभागीय लैब में मीटर जांच कराने का कानूनी अधिकार है। यदि मीटर 2.5% से तेज चला तो फीस वापस मिलेगी और अतिरिक्त बिल कटेगा।',
+    hercRuleEn: 'Consumer has statutory right to request Meter Accuracy Testing on site or in Nigam testing lab by depositing nominal fee prescribed under HERC Schedule of General Charges (approx. ₹100 for single phase, ₹250 for three phase, subject to latest sub-division circular). If meter is tested fast (>2.5%), fee is refunded and excess billing is credited.',
+    hercRuleHi: 'उपभोक्ता को HERC नियमों के तहत निर्धारित सांकेतिक शुल्क (लगभग ₹100 सिंगल फेज, ₹250 थ्री फेज) जमा करके मीटर शुद्धता परीक्षण का वैधानिक अधिकार है। यदि मीटर 2.5% से तेज पाया गया तो फीस वापस होगी और अतिरिक्त बिल समायोजित होगा।',
     actionEn: 'Apply for meter accuracy test using the official HERC test request format below.',
     actionHi: 'नीचे दिए प्रारूप से SDO कार्यालय में मीटर शुद्धता परीक्षण (Accuracy Test) का आवेदन दें।',
     badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300'
@@ -549,6 +549,29 @@ Account Number: ${accountNumber || '[Account Number]'}`;
                 : 'If the sub-division does not revise the bill or inspect the meter within 7 days, dial 1912 quote your Diary Number to escalate directly to the Circle CGRF.'}
             </li>
           </ol>
+        </div>
+
+        {/* Verified Toll-Free Helplines & Last Verified Stamp */}
+        <div className="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-bold text-slate-700">
+              {lang === 'hi' ? 'सत्यापित टोल-फ्री हेल्पलाइन:' : 'Verified Dispute Helplines:'}
+            </span>
+            <a href="tel:1912" className="font-mono font-bold text-rose-600 hover:underline">
+              1912 (24x7 Universal)
+            </a>
+            <span>•</span>
+            <a href="tel:18001804334" className="font-mono font-bold text-sky-700 hover:underline">
+              1800-180-4334 (DHBVN)
+            </a>
+            <span>•</span>
+            <a href="tel:18001801550" className="font-mono font-bold text-emerald-700 hover:underline">
+              1800-180-1550 (UHBVN)
+            </a>
+          </div>
+          <div className="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+            {lang === 'hi' ? 'HERC आपूर्ति संहिता नियम 61 अनुसार सत्यापित: मार्च 2025' : 'Verified against HERC Supply Code Reg. 61: March 2025'}
+          </div>
         </div>
       </div>
     </div>

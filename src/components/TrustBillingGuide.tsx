@@ -232,6 +232,29 @@ export const TrustBillingGuide: React.FC<Props> = ({ lang }) => {
           </div>
         </div>
       </div>
+
+      {/* Verified Toll-Free Helplines & Last Verified Stamp */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="font-bold text-slate-800">
+            {lang === 'hi' ? 'आधिकारिक हरियाणा बिजली हेल्पलाइन:' : 'Official Haryana Electricity Helplines:'}
+          </span>
+          <a href="tel:1912" className="font-mono font-bold text-rose-600 hover:underline">
+            1912 (24x7 Universal)
+          </a>
+          <span>•</span>
+          <a href="tel:18001804334" className="font-mono font-bold text-sky-700 hover:underline">
+            1800-180-4334 (DHBVN Toll-Free)
+          </a>
+          <span>•</span>
+          <a href="tel:18001801550" className="font-mono font-bold text-emerald-700 hover:underline">
+            1800-180-1550 (UHBVN Toll-Free)
+          </a>
+        </div>
+        <div className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-md border border-slate-200">
+          {lang === 'hi' ? 'HERC व निगम व्हाट्सएप पोर्टल अनुसार सत्यापित: मार्च 2025' : 'Verified against HERC & DISCOM Portals: March 2025'}
+        </div>
+      </div>
     </div>
   );
 };

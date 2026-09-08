@@ -14,7 +14,7 @@ import {
   Building
 } from 'lucide-react';
 import { Language, DiscomType } from '../types';
-import { OFFICIAL_LINKS } from '../data/haryanaData';
+import { OFFICIAL_LINKS, VERIFIED_HELPLINES } from '../data/haryanaData';
 
 interface Props {
   lang: Language;
@@ -29,21 +29,30 @@ export const PaymentHelpResolver: React.FC<Props> = ({ lang }) => {
 
   const uhbvnCheckUrl = 'https://epayment.uhbvn.org.in/';
   const dhbvnCheckUrl = 'https://epayment.dhbvn.org.in/';
+  const officialGrievanceEmail = selectedDiscom === 'UHBVN' 
+    ? VERIFIED_HELPLINES.uhbvnGrievanceEmail 
+    : VERIFIED_HELPLINES.dhbvnGrievanceEmail;
+  const officialTollFree = selectedDiscom === 'UHBVN'
+    ? VERIFIED_HELPLINES.uhbvnTollFree
+    : VERIFIED_HELPLINES.dhbvnTollFree;
+  const portalComplaintUrl = selectedDiscom === 'UHBVN'
+    ? OFFICIAL_LINKS.uhbvn.complaintPortal
+    : OFFICIAL_LINKS.dhbvn.complaintPortal;
 
   const generateComplaintEmail = () => {
     const isHi = lang === 'hi';
     const discomName = selectedDiscom === 'UHBVN' ? 'UHBVN (North Haryana)' : 'DHBVN (South Haryana)';
-    const emailTo = selectedDiscom === 'UHBVN' ? 'billing@uhbvn.org.in' : 'billing@dhbvn.org.in';
 
     if (isHi) {
-      return `विषय: बिजली बिल भुगतान राशि बैंक से कटने किंतु रसीद जनरेट न होने / पेंडिंग दिखने बाबत (खाता संख्या: ${accountNumber || '[खाता संख्या]'})
+      return `प्रेषित: ${officialGrievanceEmail} (एवं संबंधित उप-मंडल अधिकारी / SDO)
+विषय: बिजली बिल भुगतान राशि बैंक से कटने किंतु रसीद जनरेट न होने / पेंडिंग दिखने बाबत (खाता संख्या: ${accountNumber || '[खाता संख्या]'})
 
 सेवा में,
-बिलिंग सहायता प्रकोष्ठ / आईटी सेल,
+बिलिंग समाधान सेल / 1912 ग्रीवेंस सेल,
 ${discomName}।
 
 महोदय,
-प्रार्थी ने ${selectedDiscom} पोर्टल/ऐप के माध्यम से अपने बिजली बिल का ऑनलाइन भुगतान किया था। बैंक खाते से राशि कट चुकी है, किंतु पोर्टल पर स्थिति 'Pending' / 'Failed' आ रही है और रसीद नहीं मिली।
+प्रार्थी ने ${selectedDiscom} आधिकारिक पोर्टल/पेमेंट गेटवे के माध्यम से अपने बिजली बिल का ऑनलाइन भुगतान किया था। बैंक खाते से राशि कट चुकी है, किंतु पोर्टल पर स्थिति 'Pending' / 'Unpaid' आ रही है और रसीद नहीं मिली।
 
 भुगतान विवरण:
 1. उपभोक्ता खाता संख्या: ${accountNumber || '[10-अंकों का खाता नंबर]'}
@@ -61,15 +70,16 @@ RBI एवं विधिक नियमों के अनुसार य�
 मोबाइल नंबर: ______________________`;
     }
 
-    return `Subject: Urgent - Payment Debited from Bank but Receipt Not Generated / Transaction Pending (Account No: ${accountNumber || '[Account Number]'})
+    return `To: ${officialGrievanceEmail} (and concerned Sub-Divisional Officer / SDO)
+Subject: Urgent - Payment Debited from Bank but Receipt Not Generated / Transaction Pending (Account No: ${accountNumber || '[Account Number]'})
 
 To,
-Billing & Payment Reconciliation Cell / IT Desk,
+Billing & Payment Reconciliation Cell / 1912 Grievance Desk,
 ${discomName}.
 
 Respected Sir/Madam,
 
-I have attempted an online payment for my electricity bill via the ${selectedDiscom} payment gateway. The amount of ₹${paidAmount || '[Amount]'} has been successfully debited from my bank account, however the official portal continues to show the bill as UNPAID / Transaction Failed, and no official e-receipt has been generated.
+I made an online payment for my electricity bill via the official ${selectedDiscom} payment gateway. The amount of ₹${paidAmount || '[Amount]'} has been successfully debited from my bank account, however the official portal continues to show the bill as UNPAID / Transaction Failed, and no official e-receipt has been generated.
 
 Transaction Details:
 1. 10-Digit Consumer Account Number: ${accountNumber || '[Account Number]'}
@@ -326,6 +336,52 @@ Account No: ${accountNumber || '[Account Number]'}`;
           <pre className="whitespace-pre-wrap font-sans text-xs text-slate-200 leading-relaxed">
             {generateComplaintEmail()}
           </pre>
+        </div>
+
+        {/* Official 1912 Grievance Escalation & Docket Instructions */}
+        <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div>
+            <span className="font-extrabold text-amber-900 block mb-0.5">
+              {lang === 'hi' ? 'जरूरी सलाह: 1912 शिकायत डॉकेट नंबर अवश्य लें' : 'Critical Advice: Always Obtain a 1912 Docket Number'}
+            </span>
+            <p className="text-slate-700 leading-relaxed">
+              {lang === 'hi'
+                ? `ईमेल भेजने के साथ-साथ टोल-फ्री 1912 या ${officialTollFree} पर कॉल करके या ऑनलाइन पोर्टल पर शिकायत दर्ज कराकर डॉकेट नंबर लें। यदि 48 घंटे में समाधान न हो तो यह डॉकेट नंबर CGRF में काम आता है।`
+                : `In addition to emailing, register a formal complaint on 1912 or ${officialTollFree} to secure a trackable docket number for CGRF escalation.`}
+            </p>
+          </div>
+          <a
+            href={portalComplaintUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-1.5 px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg text-xs transition-colors shadow-xs"
+          >
+            <span>{lang === 'hi' ? 'ऑनलाइन 1912 शिकायत दर्ज करें' : 'Register 1912 Online'}</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
+        {/* Verified Toll-Free Helpline Footer Bar */}
+        <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-bold text-slate-700">
+              {lang === 'hi' ? 'सत्यापित टोल-फ्री हेल्पलाइन:' : 'Verified Toll-Free Helplines:'}
+            </span>
+            <a href="tel:1912" className="font-mono font-bold text-rose-600 hover:underline">
+              1912 (24x7)
+            </a>
+            <span>•</span>
+            <a href="tel:18001804334" className="font-mono font-bold text-sky-700 hover:underline">
+              1800-180-4334 (DHBVN)
+            </a>
+            <span>•</span>
+            <a href="tel:18001801550" className="font-mono font-bold text-emerald-700 hover:underline">
+              1800-180-1550 (UHBVN)
+            </a>
+          </div>
+          <div className="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md">
+            {lang === 'hi' ? VERIFIED_HELPLINES.lastVerifiedBadgeHi : VERIFIED_HELPLINES.lastVerifiedBadgeEn}
+          </div>
         </div>
       </div>
     </div>

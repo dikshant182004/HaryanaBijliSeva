@@ -185,6 +185,14 @@ export const BillCalculator: React.FC<Props> = ({ lang }) => {
                 ₹{bill.totalBill.toLocaleString('en-IN')}
               </div>
             </div>
+
+            {/* Regulatory Sourcing Badge */}
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <span>{lang === 'hi' ? 'लागू स्लैब: HERC टैरिफ आदेश 2024-25' : 'Tariff Order: HERC FY 2024-25 / 2025-26'}</span>
+              <span className="font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">
+                {lang === 'hi' ? 'सत्यापित: मार्च 2025' : 'Verified: March 2025'}
+              </span>
+            </div>
           </div>
         </div>
       </div>

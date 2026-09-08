@@ -2,7 +2,7 @@ import React from 'react';
 import { Zap, ExternalLink, ShieldAlert, PhoneCall } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
-import { OFFICIAL_LINKS } from '../data/haryanaData';
+import { OFFICIAL_LINKS, HARYANA_DISTRICTS } from '../data/haryanaData';
 import { Link } from '../router/RouterContext';
 
 interface Props {
@@ -84,6 +84,21 @@ export const Footer: React.FC<Props> = ({ lang }) => {
               <li>
                 <Link to="/bill-calculator" className="hover:text-white transition-colors">
                   {t.nav.billCalc}
+                </Link>
+              </li>
+              <li>
+                <Link to="/bill-sanity-checker" className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
+                  {lang === 'hi' ? '⚡ बिल सेनिटी चेकर (ओवरबिलिंग ऑडिट)' : '⚡ Bill Sanity Checker & Audit'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/complaint-generator" className="text-rose-400 hover:text-rose-300 transition-colors font-medium">
+                  {lang === 'hi' ? '📝 विधिक शिकायत पत्र जनरेटर' : '📝 Statutory SDO Complaint Notice'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/bill-glossary" className="text-sky-400 hover:text-sky-300 transition-colors font-medium">
+                  {lang === 'hi' ? '📖 बिल शब्दावली (ACD, FSA, MDI)' : '📖 Bill Terms & Charges Glossary'}
                 </Link>
               </li>
               <li>
@@ -186,9 +201,45 @@ export const Footer: React.FC<Props> = ({ lang }) => {
           </div>
         </div>
 
+        {/* District Local Hubs Internal Linking Strip */}
+        <div className="pt-6 pb-6 border-t border-slate-800">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+              {lang === 'hi' ? 'हरियाणा 22 जिले बिजली बोर्ड गाइड व हेल्पलाइन:' : 'Haryana 22 Districts Electricity Helplines & Guides:'}
+            </span>
+            <Link to="/districts" className="text-xs text-emerald-400 hover:text-emerald-300 font-bold">
+              {lang === 'hi' ? 'सभी 22 जिले देखें →' : 'View All 22 District Guides →'}
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-x-3 gap-y-1.5 text-xs text-slate-400">
+            {HARYANA_DISTRICTS.map((d) => (
+              <Link
+                key={d.id}
+                to={`/districts/${d.id}`}
+                className="hover:text-white transition-colors"
+              >
+                {lang === 'hi' ? d.nameHi : d.nameEn} ({d.discom})
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-slate-500">
           <p>{t.footer.copyright}</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
+            <Link to="/about" className="hover:text-slate-300 transition-colors">
+              {lang === 'hi' ? 'हमारे बारे में (About)' : 'About Initiative'}
+            </Link>
+            <span>•</span>
+            <Link to="/privacy" className="hover:text-slate-300 transition-colors">
+              {lang === 'hi' ? 'गोपनीयता नीति (Privacy)' : 'Privacy Policy'}
+            </Link>
+            <span>•</span>
+            <Link to="/disclaimer" className="hover:text-slate-300 transition-colors">
+              {lang === 'hi' ? 'वैधानिक अस्वीकरण (Disclaimer)' : 'Statutory Disclaimer'}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
