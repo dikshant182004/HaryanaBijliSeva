@@ -33,17 +33,26 @@ export const BillCalculatorPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryana-bijli.gov.guide/'
+          item: 'https://haryanabijliseva.in/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'बिजली बिल कैलकुलेटर' : 'Bill Calculator',
-          item: 'https://haryana-bijli.gov.guide/bill-calculator'
+          item: 'https://haryanabijliseva.in/bill-calculator'
         }
       ]
     }
   };
+
+  const keywords = [
+    'हरियाणा बिजली बिल कैलकुलेटर',
+    'uhbvn bill calculator',
+    'dhbvn bill calculator',
+    'bijli bill calculation formula haryana',
+    'herc tariff slabs domestic',
+    'fsa charges haryana'
+  ];
 
   return (
     <div className="py-8 bg-slate-50 min-h-screen">
@@ -52,6 +61,7 @@ export const BillCalculatorPage: React.FC<Props> = ({ lang }) => {
         description={pageDescription}
         path="/bill-calculator"
         schema={schema}
+        keywords={keywords}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

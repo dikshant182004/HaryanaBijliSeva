@@ -12,6 +12,26 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://haryanabijliseva.in/acd-calculator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://haryanabijliseva.in/rts-compensation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://haryanabijliseva.in/surcharge-waiver</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://haryanabijliseva.in/quick-pay</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://haryanabijliseva.in/discom-finder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -110,4 +130,30 @@
   <url><loc>https://haryanabijliseva.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://haryanabijliseva.in/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://haryanabijliseva.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- 22+ High-Search-Demand Citizen Articles & Knowledge Base -->
+  <url><loc>https://haryanabijliseva.in/articles</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/acd-charges-in-haryana-electricity-bill</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/fsa-fuel-surcharge-adjustment-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/burnt-meter-replacement-rules-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/how-to-transfer-electricity-meter-name-after-death-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/pm-surya-ghar-muft-bijli-yojana-haryana-subsidy</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/section-135-electricity-theft-notice-defense-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/smart-meter-fast-running-testing-procedure</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/mdi-penalty-and-load-extension-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/haryana-tubewell-connection-solar-pump-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/how-to-complain-to-cgrf-and-electricity-ombudsman-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/average-defective-billing-d-code-explanation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/haryana-surcharge-mafi-ots-scheme-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/solar-subsidy-income-limit-parivar-pehchan-patra</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/disconnection-notice-rules-section-56</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/voltage-fluctuation-appliance-damage-compensation-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/haryana-electricity-domestic-tariff-slabs-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/how-to-apply-new-solar-net-meter-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/commercial-vs-domestic-electricity-connection-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/electricity-meter-seals-verification-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/how-to-check-electricity-bill-online-without-account-number</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/power-theft-informer-cash-reward-scheme</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/dg-genset-submeter-dual-source-billing-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.in/articles/how-to-pay-haryana-electricity-bill-online-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
 </urlset>

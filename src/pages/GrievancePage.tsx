@@ -35,17 +35,26 @@ export const GrievancePage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryana-bijli.gov.guide/'
+          item: 'https://haryanabijliseva.in/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? '1912 शिकायत व CGRF' : '1912 Grievance & CGRF',
-          item: 'https://haryana-bijli.gov.guide/grievance-1912'
+          item: 'https://haryanabijliseva.in/grievance-1912'
         }
       ]
     }
   };
+
+  const keywords = [
+    'हरियाणा 1912 बिजली शिकायत',
+    'uhbvn complaint 1912',
+    'dhbvn toll free helpline',
+    'cgrf haryana complaint letter format',
+    'electricity ombudsman haryana appeal',
+    'bijli vibhag shikayat haryana'
+  ];
 
   const sampleComplaintDraft = `To,
 The Chairman / Member,
@@ -84,6 +93,7 @@ Enclosures: Copy of 1912 SMS, Copy of Paid Bill Receipt, Previous representation
         description={pageDescription}
         path="/grievance-1912"
         schema={schema}
+        keywords={keywords}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

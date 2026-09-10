@@ -7,14 +7,18 @@ interface SeoHeadProps {
   path: string;
   schema?: Record<string, any> | Record<string, any>[];
   ogType?: 'website' | 'article';
+  keywords?: string[];
 }
 
-export function SeoHead({ title, description, path, schema, ogType = 'website' }: SeoHeadProps) {
+export function SeoHead({ title, description, path, schema, ogType = 'website', keywords }: SeoHeadProps) {
   const { language } = useRouter();
 
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
+    // 0. Set HTML language attribute for search engines
+    document.documentElement.lang = language === 'hi' ? 'hi' : 'en';
 
     // 1. Update Title
     document.title = title;
@@ -32,10 +36,14 @@ export function SeoHead({ title, description, path, schema, ogType = 'website' }
 
     // Description & Open Graph
     setMetaTag('name', 'description', description);
+    if (keywords && keywords.length > 0) {
+      setMetaTag('name', 'keywords', keywords.join(', '));
+    }
     setMetaTag('property', 'og:title', title);
     setMetaTag('property', 'og:description', description);
     setMetaTag('property', 'og:type', ogType);
     setMetaTag('property', 'og:locale', language === 'hi' ? 'hi_IN' : 'en_IN');
+    setMetaTag('property', 'og:locale:alternate', language === 'hi' ? 'en_IN' : 'hi_IN');
 
     const origin = window.location.origin;
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
@@ -107,7 +115,7 @@ export function SeoHead({ title, description, path, schema, ogType = 'website' }
     return () => {
       // Clean up script on unmount if needed
     };
-  }, [title, description, path, schema, language, ogType]);
+  }, [title, description, path, schema, language, ogType, keywords]);
 
   return null;
 }

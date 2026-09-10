@@ -18,11 +18,15 @@ import {
   CreditCard,
   Cpu,
   MessageSquare,
-  BookOpen
+  BookOpen,
+  Percent,
+  ShieldAlert,
+  Coins
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { HARYANA_DISTRICTS, OFFICIAL_LINKS } from '../data/haryanaData';
+import { ARTICLES_DATA } from '../data/articlesData';
 import { Link, useRouter } from '../router/RouterContext';
 import { SeoHead } from '../components/SeoHead';
 import { FaqSection } from '../components/FaqSection';
@@ -149,6 +153,10 @@ export const HomePage: React.FC<Props> = ({ lang }) => {
               <span className="text-slate-400 font-semibold mr-1">
                 {lang === 'hi' ? 'सीधे पहुंचें:' : 'Direct Access:'}
               </span>
+              <Link to="/articles" className="px-3.5 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold transition-all shadow-sm flex items-center gap-1.5 border border-emerald-300">
+                <BookOpen className="w-3.5 h-3.5 text-slate-950" />
+                <span>{lang === 'hi' ? '📚 22+ बिजली गाइड व नियम' : '📚 22+ Citizen Guides'}</span>
+              </Link>
               <Link to="/discom-finder" className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium transition-all border border-white/15">
                 {lang === 'hi' ? 'डिस्कॉम फाइंडर' : 'Discom Finder'}
               </Link>
@@ -315,6 +323,76 @@ export const HomePage: React.FC<Props> = ({ lang }) => {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Knowledge Base & Citizen Guides (Prominent & High Priority) */}
+      <section className="py-14 bg-gradient-to-b from-slate-100/90 to-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-2">
+                <BookOpen className="w-3.5 h-3.5" />
+                {lang === 'hi' ? '22+ आधिकारिक उपभोक्ता गाइड्स' : '22+ Statutory Citizen Guides'}
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                {lang === 'hi' ? 'हरियाणा बिजली ज्ञान केंद्र (सत्यापित नियम व समाधान)' : 'Haryana Electricity Knowledge Base & Legal Guides'}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+                {lang === 'hi'
+                  ? 'ACD चार्ज, FSA, मीटर जलने, सोलर सब्सिडी, लोड पेनल्टी व कानूनी अधिकारों पर HERC विनियमों पर आधारित प्रामाणिक विश्लेषण।'
+                  : 'Deep-dive analysis on ACD deposits, fuel adjustments, burnt meters, rooftop solar, load enhancement, and Section 135 theft notices.'}
+              </p>
+            </div>
+            <Link
+              to="/articles"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-bold transition-all shadow-sm shrink-0"
+            >
+              <span>{lang === 'hi' ? 'सभी 22 गाइड्स देखें' : 'Browse All 22 Guides'}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ARTICLES_DATA.slice(0, 6).map((art) => (
+              <div
+                key={art.slug}
+                className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs hover:shadow-lg hover:border-emerald-500/50 transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2.5">
+                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">
+                      {lang === 'hi' ? art.categoryLabelHi : art.categoryLabelEn}
+                    </span>
+                    <span className="text-[11px] text-slate-400 font-medium">
+                      {art.readTimeMinutes} {lang === 'hi' ? 'मिनट' : 'min read'}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors line-clamp-2 mb-2 leading-snug">
+                    <Link to={`/articles/${art.slug}`}>
+                      {lang === 'hi' ? art.titleHi : art.titleEn}
+                    </Link>
+                  </h3>
+                  <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">
+                    {lang === 'hi' ? art.shortDescHi : art.shortDescEn}
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[11px] text-emerald-800 font-semibold flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    {lang === 'hi' ? 'HERC नियम सत्यापित' : 'HERC Rule Verified'}
+                  </span>
+                  <Link
+                    to={`/articles/${art.slug}`}
+                    className="text-xs font-bold text-emerald-600 group-hover:text-emerald-700 inline-flex items-center gap-1"
+                  >
+                    <span>{lang === 'hi' ? 'पढ़ें' : 'Read'}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -723,6 +801,110 @@ export const HomePage: React.FC<Props> = ({ lang }) => {
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-800 hover:text-sky-950"
                 >
                   <span>{lang === 'hi' ? 'शब्दावली डिकोडर खोलें' : 'Open Bill Glossary'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 16: ACD Security Interest & 18% Penal Rate */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-emerald-600">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
+                  <Percent className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '16. ACD सिक्योरिटी ब्याज व 18% जुर्माना कैलकुलेटर' : '16. ACD Security Interest & 18% Penal Calculator'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'HERC विनियम 5.7 के अनुसार जमा सिक्योरिटी पर 6.75% वार्षिक ब्याज व अप्रैल/मई बिल में न मिलने पर 18% दंडात्मक ब्याज का तुरंत हिसाब निकालें और SDO क्लेम लेटर बनाएं।'
+                    : 'Calculate statutory 6.75% annual interest on UHBVN/DHBVN consumption security deposits, plus 18% penal interest for delayed credit under HERC Supply Code Reg 5.7.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/acd-calculator"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 hover:text-emerald-950"
+                >
+                  <span>{lang === 'hi' ? 'ACD ब्याज कैलकुलेटर खोलें' : 'Open ACD Interest Tool'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 17: Right to Service (RTS) Delay Compensation */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-rose-600">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center mb-4">
+                  <ShieldAlert className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '17. राइट टू सर्विस (RTS) मुआवजा कैलकुलेटर' : '17. RTS Delay Compensation & Auto-Appeal'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'ट्रांसफॉर्मर जलने, कट, गलत औसत बिलिंग या नए कनेक्शन में देरी पर हरियाणा राइट टू सर्विस एक्ट के तहत मिलने वाले ₹5,000 तक के कानूनी मुआवजे का हिसाब लगाएं।'
+                    : 'Statutory compensation calculator for burnt transformers (24/48 hrs), prolonged average bills (₹500/cycle), and power cut delays under the Haryana Right to Service Act.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/rts-compensation"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-rose-800 hover:text-rose-950"
+                >
+                  <span>{lang === 'hi' ? 'मुआवजा कैलकुलेटर खोलें' : 'Open RTS Compensation Tool'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 18: Surcharge Waiver Scheme & OTS Calculator */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-amber-600">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4">
+                  <Coins className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '18. सरचार्ज (ब्याज) माफी योजना व किस्त कैलकुलेटर' : '18. Surcharge Waiver Scheme & Installment Planner'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? 'पुराने बिजली बिलों पर 100% सरचार्ज (LPSC) छूट, एकमुश्त भुगतान पर 5% अतिरिक्त मूल छूट और आसान ब्याज-मुक्त किस्तों का हिसाब लगाएं व SDO आवेदन जनरेट करें।'
+                    : 'Calculate 100% surcharge write-off on pending electricity bills, 5% lump-sum principal rebate, and interest-free installment schedules under UHBVN/DHBVN scheme.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/surcharge-waiver"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-950"
+                >
+                  <span>{lang === 'hi' ? 'सरचार्ज माफी कैलकुलेटर' : 'Open Surcharge Waiver Tool'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Tool 19: Direct Quick Pay & Helpline Directory */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all border-t-4 border-t-sky-600">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center mb-4">
+                  <CreditCard className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {lang === 'hi' ? '19. त्वरित बिजली बिल भुगतान व व्हाट्सएप चैटबॉट' : '19. Direct Quick Pay & Official Helplines'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {lang === 'hi'
+                    ? '10-अंकों के खाता संख्या से सीधे आधिकारिक UHBVN/DHBVN पोर्टल पर 0% शुल्क बिल भरें। आधिकारिक व्हाट्सएप बॉट (9815961912 / 8813999708) व मिस्ड कॉल सेवा।'
+                    : 'Instant official portal redirect by 10-digit account number with 0% extra convenience charge. Verified WhatsApp chatbots and missed call emergency helplines.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100">
+                <Link
+                  to="/quick-pay"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-800 hover:text-sky-950"
+                >
+                  <span>{lang === 'hi' ? 'क्विक पे व हेल्पलाइन डायरेक्टरी' : 'Open Quick Pay Hub'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

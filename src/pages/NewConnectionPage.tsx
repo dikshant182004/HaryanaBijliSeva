@@ -34,17 +34,26 @@ export const NewConnectionPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryana-bijli.gov.guide/'
+          item: 'https://haryanabijliseva.in/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'नया बिजली कनेक्शन' : 'New Electricity Connection',
-          item: 'https://haryana-bijli.gov.guide/new-connection'
+          item: 'https://haryanabijliseva.in/new-connection'
         }
       ]
     }
   };
+
+  const keywords = [
+    'हरियाणा नया बिजली कनेक्शन',
+    'saral haryana new electricity connection',
+    'uhbvn new connection fees',
+    'dhbvn new connection documents',
+    'scc charges per kw haryana',
+    'family id ppp electricity connection'
+  ];
 
   const steps = [
     {
@@ -91,6 +100,7 @@ export const NewConnectionPage: React.FC<Props> = ({ lang }) => {
         description={pageDescription}
         path="/new-connection"
         schema={schema}
+        keywords={keywords}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

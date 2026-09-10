@@ -17,7 +17,11 @@ import {
   MessageSquare,
   Scale,
   FileText,
-  BookOpen
+  BookOpen,
+  Percent,
+  ShieldAlert,
+  ShieldCheck,
+  Coins
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -48,6 +52,11 @@ export const Navbar: React.FC<Props> = ({ lang, setLang }) => {
   // Primary nav links (concise labels to avoid any desktop flex crowding)
   const primaryNavLinks = [
     { 
+      to: '/articles', 
+      label: lang === 'hi' ? 'ज्ञान केंद्र (22 गाइड्स)' : 'Guides & Rules (22)',
+      isSpecial: true
+    },
+    { 
       to: '/discom-finder', 
       label: lang === 'hi' ? 'डिस्कॉम फाइंडर' : 'Discom Finder' 
     },
@@ -71,6 +80,41 @@ export const Navbar: React.FC<Props> = ({ lang, setLang }) => {
 
   // Secondary tools in dropdown & mobile drawer
   const moreTools = [
+    {
+      to: '/acd-calculator',
+      label: lang === 'hi' ? 'ACD ब्याज कैलकुलेटर (6.75% व 18% जुर्माना)' : 'ACD Interest Calculator (6.75% & 18% Penalty)',
+      desc: lang === 'hi' ? 'जमा सिक्योरिटी पर ब्याज व देरी पर 18% पेनाल्टी क्लेम' : 'Calculate annual interest on security deposit & penal claim',
+      icon: Percent,
+      color: 'text-emerald-700 bg-emerald-50'
+    },
+    {
+      to: '/rts-compensation',
+      label: lang === 'hi' ? 'राइट टू सर्विस मुआवजा (₹5,000 हर्जाना)' : 'RTS Delay Compensation (₹5,000 Penalty)',
+      desc: lang === 'hi' ? 'ट्रांसफॉर्मर जलने, कट व औसत बिलिंग पर कानूनी हर्जाना' : 'Claim compensation for power outage & average billing delay',
+      icon: ShieldAlert,
+      color: 'text-rose-600 bg-rose-50'
+    },
+    {
+      to: '/surcharge-waiver',
+      label: lang === 'hi' ? 'सरचार्ज (ब्याज) माफी योजना 2025' : 'Surcharge Waiver & Arrears Scheme',
+      desc: lang === 'hi' ? 'पुराने बिजली बिल पर 100% सरचार्ज छूट व आसान किस्तें' : '100% surcharge waiver on pending bills & installment planner',
+      icon: Coins,
+      color: 'text-amber-600 bg-amber-50'
+    },
+    {
+      to: '/quick-pay',
+      label: lang === 'hi' ? 'क्विक पे व 1912 व्हाट्सएप डायरेक्टरी' : 'Quick Pay & 1912 WhatsApp Helplines',
+      desc: lang === 'hi' ? 'सीधे सरकारी पोर्टल पर 0% शुल्क बिल भुगतान व चैटबॉट' : 'Direct zero-fee payment & official emergency numbers',
+      icon: CreditCard,
+      color: 'text-sky-600 bg-sky-50'
+    },
+    {
+      to: '/articles',
+      label: lang === 'hi' ? 'ज्ञान केंद्र व 22+ उपभोक्ता गाइड्स' : 'Guides & Knowledge Base (22+ Articles)',
+      desc: lang === 'hi' ? 'ACD चार्ज, मीटर जलना, लोड, सोलर व कानूनी अधिकारों पर सत्यापित समाधान' : 'Verified statutory guides on ACD charge, burnt meters, load & rights',
+      icon: BookOpen,
+      color: 'text-emerald-700 bg-emerald-50'
+    },
     {
       to: '/bill-sanity-checker',
       label: lang === 'hi' ? 'बिल सेनिटी चेकर (ओवरबिलिंग ऑडिट)' : 'Bill Sanity Checker & Audit',
@@ -172,6 +216,22 @@ export const Navbar: React.FC<Props> = ({ lang, setLang }) => {
           <nav className="hidden lg:flex items-center gap-1 text-xs xl:text-sm font-semibold text-slate-700">
             {primaryNavLinks.map((link) => {
               const isActive = currentPath === link.to;
+              if (link.isSpecial) {
+                return (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all whitespace-nowrap text-xs xl:text-sm font-bold shadow-xs ${
+                      isActive 
+                        ? 'bg-emerald-800 text-white' 
+                        : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                    }`}
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-emerald-200" />
+                    <span>{link.label}</span>
+                  </Link>
+                );
+              }
               return (
                 <Link
                   key={link.to}
@@ -287,6 +347,19 @@ export const Navbar: React.FC<Props> = ({ lang, setLang }) => {
 
             {primaryNavLinks.map((link) => {
               const isActive = currentPath === link.to;
+              if (link.isSpecial) {
+                return (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-bold bg-emerald-700 text-white shadow-xs my-1"
+                  >
+                    <BookOpen className="w-4 h-4 text-emerald-200" />
+                    <span>{link.label}</span>
+                  </Link>
+                );
+              }
               return (
                 <Link
                   key={link.to}

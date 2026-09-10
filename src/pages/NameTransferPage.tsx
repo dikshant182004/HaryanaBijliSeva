@@ -34,17 +34,25 @@ export const NameTransferPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryana-bijli.gov.guide/'
+          item: 'https://haryanabijliseva.in/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'नाम ट्रांसफर गाइड' : 'Name Transfer Guide',
-          item: 'https://haryana-bijli.gov.guide/name-transfer'
+          item: 'https://haryanabijliseva.in/name-transfer'
         }
       ]
     }
   };
+
+  const keywords = [
+    'हरियाणा बिजली मीटर नाम ट्रांसफर',
+    'uhbvn change of name process',
+    'dhbvn meter transfer indemnity bond form a-1',
+    'electricity connection ownership transfer documents haryana',
+    'bijli bill par naam badalna'
+  ];
 
   return (
     <div className="py-8 bg-slate-50 min-h-screen">
@@ -53,6 +61,7 @@ export const NameTransferPage: React.FC<Props> = ({ lang }) => {
         description={pageDescription}
         path="/name-transfer"
         schema={schema}
+        keywords={keywords}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

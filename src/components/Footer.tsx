@@ -87,6 +87,31 @@ export const Footer: React.FC<Props> = ({ lang }) => {
                 </Link>
               </li>
               <li>
+                <Link to="/acd-calculator" className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
+                  {lang === 'hi' ? '💰 ACD ब्याज कैलकुलेटर (6.75% व 18% जुर्माना)' : '💰 ACD Interest Calculator (6.75% & 18% Penalty)'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/rts-compensation" className="text-rose-400 hover:text-rose-300 transition-colors font-medium">
+                  {lang === 'hi' ? '⚖️ राइट टू सर्विस मुआवजा (₹5,000 हर्जाना)' : '⚖️ RTS Delay Compensation (₹5,000 Penalty)'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/surcharge-waiver" className="text-amber-400 hover:text-amber-300 transition-colors font-medium">
+                  {lang === 'hi' ? '🏷️ सरचार्ज (ब्याज) माफी योजना कैलकुलेटर' : '🏷️ Surcharge Waiver & OTS Calculator'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/quick-pay" className="text-sky-400 hover:text-sky-300 transition-colors font-medium">
+                  {lang === 'hi' ? '⚡ 0% शुल्क क्विक पे व व्हाट्सएप डायरेक्टरी' : '⚡ Quick Pay & 1912 WhatsApp Directory'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/articles" className="text-amber-400 hover:text-amber-300 transition-colors font-bold">
+                  {lang === 'hi' ? '📚 ज्ञान केंद्र (22+ सत्यापित उपभोक्ता गाइड्स)' : '📚 Knowledge Base (22+ Citizen Guides)'}
+                </Link>
+              </li>
+              <li>
                 <Link to="/bill-sanity-checker" className="text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
                   {lang === 'hi' ? '⚡ बिल सेनिटी चेकर (ओवरबिलिंग ऑडिट)' : '⚡ Bill Sanity Checker & Audit'}
                 </Link>

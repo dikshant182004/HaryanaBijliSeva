@@ -23,6 +23,12 @@ import { TrustBillingPage } from './pages/TrustBillingPage';
 import { BillGlossaryPage } from './pages/BillGlossaryPage';
 import { ComplaintGeneratorPage } from './pages/ComplaintGeneratorPage';
 import { BillSanityCheckerPage } from './pages/BillSanityCheckerPage';
+import { AcdCalculatorPage } from './pages/AcdCalculatorPage';
+import { RtsCompensationPage } from './pages/RtsCompensationPage';
+import { SurchargeWaiverPage } from './pages/SurchargeWaiverPage';
+import { QuickPayHubPage } from './pages/QuickPayHubPage';
+import { ArticlesDirectoryPage } from './pages/ArticlesDirectoryPage';
+import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { AboutPage, PrivacyPage, DisclaimerPage } from './pages/LegalTrustPages';
 
 function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) => void }) {
@@ -62,6 +68,18 @@ function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) 
     if (currentPath === '/complaint-generator') {
       return <ComplaintGeneratorPage lang={lang} />;
     }
+    if (currentPath === '/acd-calculator') {
+      return <AcdCalculatorPage lang={lang} />;
+    }
+    if (currentPath === '/rts-compensation') {
+      return <RtsCompensationPage lang={lang} />;
+    }
+    if (currentPath === '/surcharge-waiver') {
+      return <SurchargeWaiverPage lang={lang} />;
+    }
+    if (currentPath === '/quick-pay') {
+      return <QuickPayHubPage lang={lang} />;
+    }
     if (currentPath === '/bill-glossary') {
       return <BillGlossaryPage lang={lang} />;
     }
@@ -79,6 +97,14 @@ function AppContent({ lang, setLang }: { lang: Language; setLang: (l: Language) 
     }
     if (currentPath === '/trust-billing') {
       return <TrustBillingPage lang={lang} />;
+    }
+    if (currentPath === '/articles' || currentPath === '/guides') {
+      return <ArticlesDirectoryPage lang={lang} />;
+    }
+    if (currentPath.startsWith('/articles/') || currentPath.startsWith('/guides/')) {
+      const prefix = currentPath.startsWith('/articles/') ? '/articles/' : '/guides/';
+      const slug = currentPath.replace(prefix, '').split('/')[0].split('?')[0].split('#')[0];
+      return <ArticleDetailPage slug={slug} lang={lang} />;
     }
     if (currentPath === '/districts') {
       return <DistrictsPage lang={lang} />;

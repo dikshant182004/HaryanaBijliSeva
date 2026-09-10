@@ -68,5 +68,63 @@ export type PageRoute =
   | 'grievance-1912'
   | 'bill-calculator'
   | 'districts'
-  | 'district-detail';
+  | 'district-detail'
+  | 'articles'
+  | 'article-detail';
+
+export type ArticleCategory = 'billing' | 'meter' | 'connections' | 'legal' | 'schemes' | 'payments';
+
+export interface ArticleSection {
+  headingEn: string;
+  headingHi: string;
+  contentEn: string[];
+  contentHi: string[];
+  bulletPointsEn?: string[];
+  bulletPointsHi?: string[];
+  callout?: {
+    type: 'tip' | 'warning' | 'statute';
+    titleEn: string;
+    titleHi: string;
+    textEn: string;
+    textHi: string;
+  };
+}
+
+export interface Article {
+  slug: string;
+  titleEn: string;
+  titleHi: string;
+  shortDescEn: string;
+  shortDescHi: string;
+  category: ArticleCategory;
+  categoryLabelEn: string;
+  categoryLabelHi: string;
+  readTimeMinutes: number;
+  lastUpdated: string;
+  searchDemand: {
+    monthlyVolume: string;
+    primaryKeywordEn: string;
+    primaryKeywordHi: string;
+    secondaryKeywords: string[];
+  };
+  sections: ArticleSection[];
+  faqs: {
+    qEn: string;
+    qHi: string;
+    aEn: string;
+    aHi: string;
+  }[];
+  relatedTool?: {
+    labelEn: string;
+    labelHi: string;
+    path: string;
+    descEn: string;
+    descHi: string;
+  };
+  officialReference?: {
+    circularNo: string;
+    authority: string;
+    downloadUrl?: string;
+  };
+}
 

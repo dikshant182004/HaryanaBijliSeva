@@ -35,17 +35,26 @@ export const DiscomFinderPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryana-bijli.gov.guide/'
+          item: 'https://haryanabijliseva.in/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'डिस्कॉम फाइंडर' : 'Discom Finder',
-          item: 'https://haryana-bijli.gov.guide/discom-finder'
+          item: 'https://haryanabijliseva.in/discom-finder'
         }
       ]
     }
   };
+
+  const keywords = [
+    'mera kaun sa discom hai',
+    'uhbvn or dhbv finder',
+    'which electricity board in haryana',
+    'हरियाणा बिजली निगम कौन सा है',
+    'check uhbvn or dhbvn by pincode',
+    'bijli bill account number search haryana'
+  ];
 
   const uhbvnDistricts = HARYANA_DISTRICTS.filter(d => d.discom === 'UHBVN');
   const dhbvnDistricts = HARYANA_DISTRICTS.filter(d => d.discom === 'DHBVN');
@@ -57,6 +66,7 @@ export const DiscomFinderPage: React.FC<Props> = ({ lang }) => {
         description={pageDescription}
         path="/discom-finder"
         schema={schema}
+        keywords={keywords}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
