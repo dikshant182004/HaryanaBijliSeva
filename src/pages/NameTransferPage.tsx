@@ -34,13 +34,13 @@ export const NameTransferPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'नाम ट्रांसफर गाइड' : 'Name Transfer Guide',
-          item: 'https://haryanabijliseva.in/name-transfer'
+          item: 'https://haryanabijliseva.pages.dev/name-transfer'
         }
       ]
     }

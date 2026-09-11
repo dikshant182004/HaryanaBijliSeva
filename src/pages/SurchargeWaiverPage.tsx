@@ -107,7 +107,7 @@ Date: ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', 
     '@type': 'WebApplication',
     name: pageTitle,
     description: pageDescription,
-    url: 'https://haryanabijliseva.in/surcharge-waiver',
+    url: 'https://haryanabijliseva.pages.dev/surcharge-waiver',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'All',
     offers: {

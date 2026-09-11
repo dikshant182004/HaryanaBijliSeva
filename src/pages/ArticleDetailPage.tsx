@@ -55,21 +55,21 @@ export function ArticleDetailPage({ slug, lang }: Props) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://haryanabijliseva.in/articles/${article.slug}`
+      '@id': `https://haryanabijliseva.pages.dev/articles/${article.slug}`
     },
     headline: title,
     description: shortDesc,
     author: {
       '@type': 'Organization',
       name: 'Haryana Bijli Seva Editorial Board',
-      url: 'https://haryanabijliseva.in'
+      url: 'https://haryanabijliseva.pages.dev'
     },
     publisher: {
       '@type': 'Organization',
       name: 'Haryana Bijli Seva',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://haryanabijliseva.in/icon-512.png'
+        url: 'https://haryanabijliseva.pages.dev/icon-512.png'
       }
     },
     datePublished: '2024-04-01T08:00:00+05:30',

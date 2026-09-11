@@ -107,7 +107,7 @@ Date: ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', 
     '@type': 'WebApplication',
     name: pageTitle,
     description: pageDescription,
-    url: 'https://haryanabijliseva.in/acd-calculator',
+    url: 'https://haryanabijliseva.pages.dev/acd-calculator',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'All',
     offers: {

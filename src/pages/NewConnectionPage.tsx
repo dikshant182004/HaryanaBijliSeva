@@ -34,13 +34,13 @@ export const NewConnectionPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'नया बिजली कनेक्शन' : 'New Electricity Connection',
-          item: 'https://haryanabijliseva.in/new-connection'
+          item: 'https://haryanabijliseva.pages.dev/new-connection'
         }
       ]
     }

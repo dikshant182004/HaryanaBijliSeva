@@ -56,7 +56,7 @@ export function ArticlesDirectoryPage({ lang }: Props) {
       '@type': 'Article',
       position: idx + 1,
       headline: lang === 'hi' ? a.titleHi : a.titleEn,
-      url: `https://haryanabijliseva.in/articles/${a.slug}`,
+      url: `https://haryanabijliseva.pages.dev/articles/${a.slug}`,
       description: lang === 'hi' ? a.shortDescHi : a.shortDescEn
     }))
   };

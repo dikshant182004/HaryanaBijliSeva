@@ -80,7 +80,7 @@ export const QuickPayHubPage: React.FC<Props> = ({ lang }) => {
     '@type': 'WebPage',
     name: pageTitle,
     description: pageDescription,
-    url: 'https://haryanabijliseva.in/quick-pay',
+    url: 'https://haryanabijliseva.pages.dev/quick-pay',
     mainEntity: {
       '@type': 'GovernmentService',
       name: 'Haryana Electricity Quick Pay & Helplines',

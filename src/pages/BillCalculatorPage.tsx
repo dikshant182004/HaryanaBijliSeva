@@ -33,13 +33,13 @@ export const BillCalculatorPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'बिजली बिल कैलकुलेटर' : 'Bill Calculator',
-          item: 'https://haryanabijliseva.in/bill-calculator'
+          item: 'https://haryanabijliseva.pages.dev/bill-calculator'
         }
       ]
     }

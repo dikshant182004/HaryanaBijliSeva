@@ -204,7 +204,7 @@ Contact / Account No: ${accountNumber || '[Your Account Number]'}`;
     '@type': 'WebApplication',
     name: pageTitle,
     description: pageDescription,
-    url: 'https://haryanabijliseva.in/rts-compensation',
+    url: 'https://haryanabijliseva.pages.dev/rts-compensation',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'All',
     offers: {

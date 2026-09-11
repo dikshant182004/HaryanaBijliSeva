@@ -83,13 +83,13 @@ export const DistrictsPage: React.FC<Props> = ({ lang }) => {
             '@type': 'ListItem',
             position: 1,
             name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-            item: 'https://haryanabijliseva.in/'
+            item: 'https://haryanabijliseva.pages.dev/'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: lang === 'hi' ? '22 जिलों की डायरेक्टरी' : '22 Districts Directory',
-            item: 'https://haryanabijliseva.in/districts'
+            item: 'https://haryanabijliseva.pages.dev/districts'
           }
         ]
       }

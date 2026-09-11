@@ -35,13 +35,13 @@ export const DiscomFinderPage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? 'डिस्कॉम फाइंडर' : 'Discom Finder',
-          item: 'https://haryanabijliseva.in/discom-finder'
+          item: 'https://haryanabijliseva.pages.dev/discom-finder'
         }
       ]
     }

@@ -35,13 +35,13 @@ export const GrievancePage: React.FC<Props> = ({ lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? '1912 शिकायत व CGRF' : '1912 Grievance & CGRF',
-          item: 'https://haryanabijliseva.in/grievance-1912'
+          item: 'https://haryanabijliseva.pages.dev/grievance-1912'
         }
       ]
     }

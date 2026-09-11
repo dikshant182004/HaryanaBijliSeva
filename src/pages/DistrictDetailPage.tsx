@@ -150,19 +150,19 @@ export const DistrictDetailPage: React.FC<Props> = ({ districtId, lang }) => {
           '@type': 'ListItem',
           position: 1,
           name: lang === 'hi' ? 'मुख्य पृष्ठ' : 'Home',
-          item: 'https://haryanabijliseva.in/'
+          item: 'https://haryanabijliseva.pages.dev/'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: lang === 'hi' ? '22 जिले' : 'Districts',
-          item: 'https://haryanabijliseva.in/districts'
+          item: 'https://haryanabijliseva.pages.dev/districts'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: districtName,
-          item: `https://haryanabijliseva.in/districts/${district.id}`
+          item: `https://haryanabijliseva.pages.dev/districts/${district.id}`
         }
       ]
     }

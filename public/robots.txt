@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://haryanabijliseva.in/sitemap.xml
+Sitemap: https://haryanabijliseva.pages.dev/sitemap.xml

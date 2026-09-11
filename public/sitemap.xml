@@ -2,158 +2,158 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Citizen Tools -->
   <url>
-    <loc>https://haryanabijliseva.in/</loc>
+    <loc>https://haryanabijliseva.pages.dev/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/districts</loc>
+    <loc>https://haryanabijliseva.pages.dev/districts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/acd-calculator</loc>
+    <loc>https://haryanabijliseva.pages.dev/acd-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/rts-compensation</loc>
+    <loc>https://haryanabijliseva.pages.dev/rts-compensation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/surcharge-waiver</loc>
+    <loc>https://haryanabijliseva.pages.dev/surcharge-waiver</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/quick-pay</loc>
+    <loc>https://haryanabijliseva.pages.dev/quick-pay</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/discom-finder</loc>
+    <loc>https://haryanabijliseva.pages.dev/discom-finder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/bill-calculator</loc>
+    <loc>https://haryanabijliseva.pages.dev/bill-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/bill-dispute</loc>
+    <loc>https://haryanabijliseva.pages.dev/bill-dispute</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/bill-sanity-checker</loc>
+    <loc>https://haryanabijliseva.pages.dev/bill-sanity-checker</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/complaint-generator</loc>
+    <loc>https://haryanabijliseva.pages.dev/complaint-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/grievance-1912</loc>
+    <loc>https://haryanabijliseva.pages.dev/grievance-1912</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/new-connection</loc>
+    <loc>https://haryanabijliseva.pages.dev/new-connection</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/name-transfer</loc>
+    <loc>https://haryanabijliseva.pages.dev/name-transfer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/bill-glossary</loc>
+    <loc>https://haryanabijliseva.pages.dev/bill-glossary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/payment-help</loc>
+    <loc>https://haryanabijliseva.pages.dev/payment-help</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/smart-meter</loc>
+    <loc>https://haryanabijliseva.pages.dev/smart-meter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/load-calculator</loc>
+    <loc>https://haryanabijliseva.pages.dev/load-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/trust-billing</loc>
+    <loc>https://haryanabijliseva.pages.dev/trust-billing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haryanabijliseva.in/solar-calculator</loc>
+    <loc>https://haryanabijliseva.pages.dev/solar-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- 22 Dedicated Haryana District Guides (High Geo-Targeted Search Priority) -->
-  <url><loc>https://haryanabijliseva.in/districts/panipat</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/gurugram</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/faridabad</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/ambala</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/hisar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/karnal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/rohtak</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/sonipat</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/panchkula</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/rewari</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/kurukshetra</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/yamunanagar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/kaithal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/jind</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/jhajjar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/bhiwani</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/charkhi-dadri</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/sirsa</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/fatehabad</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/mahendragarh</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/palwal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://haryanabijliseva.in/districts/nuh</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/panipat</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/gurugram</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/faridabad</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/ambala</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/hisar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/karnal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/rohtak</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/sonipat</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/panchkula</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/rewari</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/kurukshetra</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/yamunanagar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/kaithal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/jind</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/jhajjar</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/bhiwani</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/charkhi-dadri</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/sirsa</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/fatehabad</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/mahendragarh</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/palwal</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/districts/nuh</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
 
   <!-- Informational & Legal Pages -->
-  <url><loc>https://haryanabijliseva.in/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://haryanabijliseva.in/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://haryanabijliseva.in/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- 22+ High-Search-Demand Citizen Articles & Knowledge Base -->
-  <url><loc>https://haryanabijliseva.in/articles</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/acd-charges-in-haryana-electricity-bill</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/fsa-fuel-surcharge-adjustment-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/burnt-meter-replacement-rules-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/how-to-transfer-electricity-meter-name-after-death-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/pm-surya-ghar-muft-bijli-yojana-haryana-subsidy</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/section-135-electricity-theft-notice-defense-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/smart-meter-fast-running-testing-procedure</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/mdi-penalty-and-load-extension-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/haryana-tubewell-connection-solar-pump-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/how-to-complain-to-cgrf-and-electricity-ombudsman-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/average-defective-billing-d-code-explanation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/haryana-surcharge-mafi-ots-scheme-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/solar-subsidy-income-limit-parivar-pehchan-patra</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/disconnection-notice-rules-section-56</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/voltage-fluctuation-appliance-damage-compensation-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/haryana-electricity-domestic-tariff-slabs-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/how-to-apply-new-solar-net-meter-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/commercial-vs-domestic-electricity-connection-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/electricity-meter-seals-verification-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/how-to-check-electricity-bill-online-without-account-number</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/power-theft-informer-cash-reward-scheme</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/dg-genset-submeter-dual-source-billing-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://haryanabijliseva.in/articles/how-to-pay-haryana-electricity-bill-online-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/acd-charges-in-haryana-electricity-bill</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/fsa-fuel-surcharge-adjustment-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/burnt-meter-replacement-rules-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/how-to-transfer-electricity-meter-name-after-death-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/pm-surya-ghar-muft-bijli-yojana-haryana-subsidy</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/section-135-electricity-theft-notice-defense-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/smart-meter-fast-running-testing-procedure</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/mdi-penalty-and-load-extension-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/haryana-tubewell-connection-solar-pump-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/how-to-complain-to-cgrf-and-electricity-ombudsman-haryana</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/average-defective-billing-d-code-explanation</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/haryana-surcharge-mafi-ots-scheme-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/solar-subsidy-income-limit-parivar-pehchan-patra</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/disconnection-notice-rules-section-56</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/voltage-fluctuation-appliance-damage-compensation-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/haryana-electricity-domestic-tariff-slabs-2025</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/how-to-apply-new-solar-net-meter-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/commercial-vs-domestic-electricity-connection-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/electricity-meter-seals-verification-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/how-to-check-electricity-bill-online-without-account-number</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/power-theft-informer-cash-reward-scheme</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/dg-genset-submeter-dual-source-billing-rules</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://haryanabijliseva.pages.dev/articles/how-to-pay-haryana-electricity-bill-online-uhbvn-dhbvn</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
 </urlset>
